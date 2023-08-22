@@ -24,7 +24,7 @@ import {
   tripguide,
   threejs,
   CountryApi,
-  Ecommerce
+  Ecommerce,
 } from "../assets";
 
 export const navLinks = [
@@ -221,11 +221,11 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image:Ecommerce,
+    image: Ecommerce,
     source_code_link: "https://github.com/Iscoli/cypher-e-commerce",
-    live_links:'https://iscoli-e-commerce-t4uf.vercel.app/',
-    clone:'https://kachabazer-store.vercel.app/',
-    website_name:'kachabazer-store'
+    live_links: "https://iscoli-e-commerce-t4uf.vercel.app/",
+    clone: "https://kachabazer-store.vercel.app/",
+    website_name: "kachabazer-store",
   },
   {
     name: "Country Api",
@@ -245,16 +245,14 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name:"useContext",
+        name: "useContext",
         color: "green-text-gradient",
       },
     ],
     image: CountryApi,
     source_code_link: "https://github.com/Iscoli/Country-Api",
-    live_links:'https://country-api-six.vercel.app/',
-    
+    live_links: "https://country-api-six.vercel.app/",
   },
- 
 ];
 
 export { services, technologies, experiences, testimonials, projects };
