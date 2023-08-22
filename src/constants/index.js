@@ -245,7 +245,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "useContext",
+        name:"useContext",
         color: "green-text-gradient",
       },
     ],
