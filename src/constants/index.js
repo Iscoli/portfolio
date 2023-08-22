@@ -244,6 +244,10 @@ const projects = [
         name: "css",
         color: "pink-text-gradient",
       },
+      {
+        name: "useContext",
+        color: "green-text-gradient",
+      },
     ],
     image: CountryApi,
     source_code_link: "https://github.com/Iscoli/Country-Api",
