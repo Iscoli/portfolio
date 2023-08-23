@@ -7,13 +7,9 @@ import { slideIn } from "../utils/motion";
 
 const Hero = () => {
   return (
-    <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px]
-       h-[350px]"
-      >
+    
         <ComputersCanvas />
-      </motion.div>
+    
     // <section style={{marginBottom:'100px'}} className={`relative w-full h-screen mx-auto`}
     // styles={{marginTop:'-23px'}}>
     //   <div
