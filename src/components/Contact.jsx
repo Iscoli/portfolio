@@ -54,7 +54,7 @@ const Contact = () => {
     )
     .then(()=>{
       setLoading(false)
-      toat('Thank you, I will get back to you as soon as possible. ')
+      toast('Thank you, I will get back to you as soon as possible. ')
 
     setForm({
       name: '',
