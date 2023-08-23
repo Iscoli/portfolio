@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { toast} from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -16,58 +16,57 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  
-  const {name,message,email} = form
+
+  const { name, message, email } = form;
 
   const handleChange = (e) => {
-    const {name,value} = e.target;
-   setForm({...form, [name]:value})
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   };
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setLoading(true)
-  if(name === ''){
-   toast('please fill in your name'),setLoading(false)
-   return
-  } else if(message=== ''){
-    toast('please fill in th message box'),
-    setLoading(false)
-    return
-  } else if(email === ''){
-    toast('please fill in your email'),
-     setLoading(false)
-     return
-  }
-  
-   else{
-    emailjs.send(
-      'service_gw6jt3d',
-      'template_ryd4stt',
-      {
-      from_name: form.name,
-      to_name: 'Ismail',
-      from_email: form.email,
-      to_email: 'yi016679@gmail.com',
-      message:form.message
-      },
-       'hRucGz3gmMNcl46Wk'
-    )
-    .then(()=>{
-      setLoading(false)
-      toat('Thank you, I will get back to you as soon as possible. ')
+    e.preventDefault();
+    setLoading(true);
+    if (name === "") {
+      toast("please fill in your name"), setLoading(false);
+      return;
+    } else if (message === "") {
+      toast("please fill in th message box"), setLoading(false);
+      return;
+    } else if (email === "") {
+      toast("please fill in your email"), setLoading(false);
+      return;
+    } else {
+      emailjs
+        .send(
+          "service_gw6jt3d",
+          "template_ryd4stt",
+          {
+            from_name: form.name,
+            to_name: "Ismail",
+            from_email: form.email,
+            to_email: "yi016679@gmail.com",
+            message: form.message,
+          },
+          "hRucGz3gmMNcl46Wk"
+        )
+        .then(
+          () => {
+            setLoading(false);
+            toat("Thank you, I will get back to you as soon as possible. ");
 
-    setForm({
-      name: '',
-      email: '',
-      message: '',
-    })
-    }, (error)=>{
-      setLoading(false)
-      console.log(error)
-      toast('something went wrong.')
-    })
-  }
-    
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            setLoading(false);
+            console.log(error);
+            toast("something went wrong.");
+          }
+        );
+    }
   };
   return (
     <div
@@ -111,7 +110,6 @@ const Contact = () => {
               className="text-white 
             font-medium mb-4"
             >
-              
               Your Email
             </span>
             <input
@@ -155,13 +153,13 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px]
        h-[350px]"
       >
         <EarthCanvas />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
