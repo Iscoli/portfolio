@@ -57,22 +57,28 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop="demand"
       shadows
+      frameloop="demand"
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [-4, 3, 6],
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+          autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+        <Computers />
 
-      <Preload all />
+        <Preload all />
+      </Suspense>
     </Canvas>
   );
 };
