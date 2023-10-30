@@ -25,6 +25,7 @@ import {
   threejs,
   CountryApi,
   Ecommerce,
+  man,
 } from "../assets";
 
 export const navLinks = [
@@ -98,18 +99,18 @@ const technologies = [
   //   name: "MongoDB",
   //   icon: mongodb,
   // },
-  // {
-  //   name: "Three JS",
-  //   icon: threejs,
-  // },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
   {
     name: "git",
     icon: git,
   },
-  // {
-  //   name: "figma",
-  //   icon: figma,
-  // },
+  {
+    name: "figma",
+    icon: figma,
+  },
   // {
   //   name: "docker",
   //   icon: docker,
@@ -249,9 +250,37 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: CountryApi,
+    image:CountryApi,
     source_code_link: "https://github.com/Iscoli/Country-Api",
     live_links: "https://country-api-six.vercel.app/",
+  },
+
+  
+  {
+    name: "getLinked Challenge",
+    description:
+      "Participated as a pre-hackathon participant in the GetLinked coding challenge. Designed and dev developed a creative web project inspired by a Figma design, incorporating real-world API data to demonstrate coding and technology skills.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "green-text-gradient",
+      },
+    ],
+    image:man,
+    source_code_link: "https://github.com/Iscoli/getlinked-mainchallenge",
+    live_links: " https://getlinked-mainchallenge.vercel.app/",
   },
 ];
 

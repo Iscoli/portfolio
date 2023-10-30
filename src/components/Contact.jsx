@@ -58,7 +58,7 @@ const Contact = () => {
 
     setForm({
       name: '',
-      email: '',
+      email: '', 
       message: '',
     })
     }, (error)=>{
